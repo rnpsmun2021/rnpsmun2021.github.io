@@ -15,5 +15,5 @@ function GetDate(today,finale){
     var Hours = ( 24 - today.getHours() );
     var Minutes = ( 60  - today.getMinutes());
     var Seconds = 60  - today.getSeconds();
-    document.getElementById('countdown').innerHTML = Days+' Days '+Hours+' Hours '+Minutes+' Minutes '+Seconds ;
+    document.getElementById('countdown').innerHTML = Math.floor(Days)+' Days '+Hours+' Hours '+Minutes+' Minutes '+Seconds ;
 };
