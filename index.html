@@ -1,0 +1,928 @@
+<!DOCTYPE HTML>
+<!--  Copyright 2020-->
+<html>
+
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122963322-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-122963322-1');
+	</script>
+
+	<title>R-NPSMUN</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<noscript>
+		<link rel="stylesheet" href="assets/css/noscript.css" />
+	</noscript>
+</head>
+
+<style>
+	body {
+		color: #FFFFFF
+	}
+
+	.update {
+		position: relative;
+		-webkit-animation-name: example;
+		/* Safari 4.0 - 8.0 */
+		-webkit-animation-duration: 1.5s;
+		/* Safari 4.0 - 8.0 */
+		-webkit-animation-delay: 2s;
+		/* Safari 4.0 - 8.0 */
+		-webkit-animation-fill-mode: backwards;
+		/* Safari 4.0 - 8.0 */
+		animation-name: example;
+		animation-duration: 1.5s;
+		animation-delay: 2s;
+		animation-fill-mode: backwards;
+		animation-iteration-count: infinite;
+	}
+
+	/* Safari 4.0 - 8.0 */
+	@-webkit-keyframes example {
+		0% {
+			color: white;
+		}
+
+		25% {
+			color: red;
+		}
+
+		50% {
+			color: white;
+		}
+
+		75% {
+			color: red;
+		}
+
+		100% {
+			color: white;
+		}
+	}
+
+	@keyframes example {
+		0% {
+			color: white;
+		}
+
+		25% {
+			color: red;
+		}
+
+		50% {
+			color: white;
+		}
+
+		75% {
+			color: red;
+		}
+
+		100% {
+			color: white;
+		}
+	}
+
+	.list-type5 {
+		width: 410px;
+		margin: 0 auto;
+	}
+
+	.list-type5 ol {
+		list-style-type: none;
+		list-style-type: decimal !;
+		/*IE 7- hack*/
+		margin: 0;
+		margin-left: 1em;
+		padding: 0;
+		counter-reset: li-counter;
+	}
+
+	.list-type5 ol li {
+		position: relative;
+		margin-bottom: 1.5em;
+		padding: 0.5em;
+		background-color: #313f75;
+		padding-left: 58px;
+	}
+
+	.list-type5 a {
+		text-decoration: none;
+		color: black;
+		font-size: 1em;
+		font-weight: bold;
+		font-family: 'Raleway', sans-serif;
+	}
+
+	.list-type5 li:hover {
+		box-shadow: inset -1em 0 #495891;
+		-webkit-transition: box-shadow 0.5s;
+		/* For Safari 3.1 to 6.0 */
+		transition: box-shadow 0.5s;
+	}
+
+	.list-type5 ol li:before {
+		position: absolute;
+		top: -0.3em;
+		left: -0.5em;
+		width: 1.8em;
+		height: 1.2em;
+		font-size: 2em;
+		line-height: 1.2;
+		font-weight: bold;
+		text-align: center;
+		color: #ffffff;
+		background-color: #4c5c96;
+		transform: rotate(-20deg);
+		-ms-transform: rotate(-20deg);
+		-webkit-transform: rotate(-20deg);
+		z-index: 99;
+		overflow: hidden;
+		content: counter(li-counter);
+		counter-increment: li-counter;
+	}
+
+	/*inner SCHEDULE*/
+	@charset "UTF-8";
+	
+	.container th h1 {
+		font-weight: bold;
+		font-size: 1em;
+		text-align: left;
+		color: #ffffff;
+	}
+
+	.container td {
+		font-weight: normal;
+		font-size: 1em;
+		-webkit-box-shadow: 0 2px 2px -2px #0E1119;
+		-moz-box-shadow: 0 2px 2px -2px #0E1119;
+		box-shadow: 0 2px 2px -2px #0E1119;
+	}
+
+	.container {
+		text-align: left;
+		overflow: hidden;
+		width: 80%;
+		margin: 0 auto;
+		display: table;
+		padding: 0 0 8em 0;
+	}
+
+	.container td,
+	.container th {
+		padding-bottom: 2%;
+		padding-top: 2%;
+		padding-left: 2%;
+	}
+
+	/* Background-color of the odd rows */
+	.container tr:nth-child(odd) {
+		background-color: #323C50;
+	}
+
+	/* Background-color of the even rows */
+	.container tr:nth-child(even) {
+		background-color: #2C3446;
+	}
+
+	.container th {
+		background-color: #1F2739;
+	}
+
+	.container td:first-child {
+		color: rgb(241, 240, 236);
+	}
+
+	.container tr:hover {
+		background-color: #464A52;
+		-webkit-box-shadow: 0 6px 6px -6px #0E1119;
+		-moz-box-shadow: 0 6px 6px -6px #0E1119;
+		box-shadow: 0 6px 6px -6px #0E1119;
+	}
+
+	.container td:hover {
+		background-color: #5b6eb9;
+		color: #ffffff;
+		font-weight: bold;
+		box-shadow: #475691 -1px 1px, #5367b8 -2px 2px, #5367b8 -3px 3px, #5367b8 -4px 4px, #5367b8 -5px 5px, #5367b8 -6px 6px;
+		transform: translate3d(6px, -6px, 0);
+		transition-delay: 0s;
+		transition-duration: 0.4s;
+		transition-property: all;
+		transition-timing-function: line;
+	}
+
+	@media (max-width: 800px) {
+
+		.container td:nth-child(4),
+		.container th:nth-child(4) {
+			display: none;
+		}
+	}
+</style>
+
+
+<body class="is-preload">
+
+	<!-- Page Wrapper -->
+	<div id="page-wrapper">
+
+		<!-- Header -->
+		<header id="header" class="alt">
+			<h1 style="display: inline-block">
+				<a href="index.html">R-NPSMUN</a>
+			</h1>
+			<nav style="display: inline-block">
+
+
+				<a style="color: #ffffff;" class="update" href="https://rnpsmun2020.wixsite.com/mysite"> The midnight Crisis !</a>
+
+				<a href="#menu" style="color: #ffffff;">Menu</a>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<!-- Menu -->
+		<nav id="menu">
+			<div class="inner" style="color:#ffffff">
+				<h2>Menu</h2>
+				<ul class="links" style="color:#ffffff">
+					<li style="color:#ffffff">
+						<a href="index.html" style="color:#ffffff">HOME</a>
+					</li>
+					<li style="color:#ffffff">
+						<a href="index.html#committees" style="color:#ffffff">COMMITTEES</a>
+					</li>
+					<li style="color:#ffffff">
+						<a href="registration.html" style="color:#ffffff">REGISTRATION</a>
+					</li>
+					<li style="color:#ffffff">
+						<a href="eb.html" style="color:#ffffff">SECRETARIAT</a>
+					</li>
+					<li style="color:#ffffff">
+						<a href="conactUs.html" style="color:#ffffff">CONTACT US</a>
+					</li>
+					<li style="color:#ffffff">
+						<a href="https://docs.google.com/spreadsheets/d/1mOo3ny3HLoS0j0Jg2qBp6m-a2l4K_De_DnWnc_J6p5o/edit?usp=sharing" style="color:#ffffff">COUNTRY MATRICES</a>
+					</li>
+					<li style="color:#ffffff">
+						<a href="https://drive.google.com/drive/folders/1XObPwm_UwTwooBBSjQYhOs8ShjgfTo3N?usp=sharing" style="color:#ffffff">BACKGROUND GUIDES</a>
+					</li>
+				</ul>
+				<a href="#" class="close">Close</a>
+			</div>
+		</nav>
+
+
+		<!-- Banner -->
+		<section id="banner">
+			<div class="inner">
+
+				<div class="logo">
+
+					<center><img src="./images/main-logo.jpg" style="height: 15em; width: 15em; border-radius:50% ;" class=""></center>
+					<h2>
+						<center>
+							<p style="font-size: 2em; color: white; font-weight: 700;">R-NPSMUN</p>
+							<p>TIME TO ACT, TIME TO CHANGE.</p>
+						</center>
+
+					</h2>
+				</div>
+
+				<p style="color: white">
+				<!-- <article style="background-color: #4c5c96; border-radius: 2%">
+					<h3><b>
+							<p style="color: white ;padding-right: 1em; text-align: center; font-weight: 700"> And the
+								time left is </p>
+						</b></h3>
+					<h3 class="major"><b>
+							<p style="color: white ;padding-right: 1em; text-align: center; font-weight: 700" id="countdown">
+							</p>
+						</b></h3>
+
+				</article> -->
+
+				<!-- <br>
+				<br>
+				<br>
+				<br> -->
+				<p style="color: white" class="big"> “More than ever before in human history, we share a common destiny.
+					We can master
+					it only if we face it together. And that, my friends, is why we have the United Nations.” </p>
+				<p style="color: white; margin-right:4em" align="right">~Kofi Annan</p>
+				<br>
+				<div style="overflow-x:auto">
+
+
+					<br>
+					<center>
+						<p style="font-size: 1.5em;">
+							<strong>10
+								<sup>th</sup> & &nbsp; 11
+								<sup>th</sup> &nbsp; &nbsp;
+								<sup></sup>
+								<br>September &nbsp; 2020</strong>
+						</p>
+					</center>
+				</div>
+				</p>
+
+			</div>
+
+		</section>
+
+		<!-- Wrapper -->
+		<section id="wrapper">
+
+			<!-- One -->
+			<section id="one" class="wrapper spotlight style1">
+				<div class="inner">
+					<a class="image">
+						<img src="./images/npslogo.png" alt="" />
+					</a>
+					<div class="content" style="text-align: justify">
+						<h2 class="major" style="text-align: right">About R-NPSMUN</h2>
+						<p>
+							<b>NPS Rajajinagar</b>
+							proudly presents to you the first online edition of R-NPSMUN 2020!!! </p>
+						<p>
+							An amalgamation of the consistent committees fused with a few unconventional ones, we have
+							ensured that each delegate, new
+							or experienced, has something to look forward to. Delegates will have to think on their feet
+							to keep up with the pace
+							of the debate, combating the obstacles posed, while sticking to the portfolios represented.
+							Alliances will be made,
+							strategies devised, while keeping the nations’ best interests at heart. Factual knowledge
+							along with rational arbitrations
+							will sail you through!</p>
+
+						<p>So delegates, come be a part of this exhilarating experience!
+
+						</p>
+					</div>
+				</div>
+			</section>
+
+			<!-- Sec gEN -->
+			<section id="two" class="wrapper alt spotlight style2">
+				<div class="inner">
+					<a class="image">
+						<img src="./content/ebphotos/secgen.jpg" alt="" />
+					</a>
+					<div class="content">
+						<h2>Secretary General</h2>
+						<h4 class="major">
+							<b>Anjana Palamand</b>
+						</h4>
+						<p>
+							<b></b>
+						</p>
+						<p>
+							Introducing your Secretary General for R-NPSMUN’20, Anjana Palamand &nbsp;!</p>
+						<p>
+							Anjana enjoys reading about feminism, minority rights or  politics, but behind that courteous smile and loud voice is a thinking mind, strategizing, ideating and working out her next move. Having been to more than 20 conferences, she has carried along with her EB and secretariat positions, memories, and trophies. Tread slowly delegates, you might think she is walking right next to you, but she is far, far ahead of you.
+
+						<p>
+							With someone as easily approachable and highly affable as Anjana, we hope you have a good time at R-NPSMUN 2020!</p>
+						<br>
+						<a href="#" data-toggle="modal" data-target="#secgen" class="special" style="color:#ffffff">
+							<strong><b style="font-size: 1.3em">Letter from the Secretary general</b></strong>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- UnderSec -->
+			<section id="three" class="wrapper spotlight style3">
+				<div class="inner">
+					<a class="image">
+						<img src="./content/ebphotos/undersec.jpg" alt=""
+							style="height : 15em; width : 15em; left: 50%;border-radius: 100%" />
+					</a>
+					<div class="content"> 
+						<h2>Crisis Director </h2>
+						<h4 class="major">
+							<b>Srishti M</b>
+						</h4>
+						<p> Behind her serious demeanour and her logical and pragmatic nature, Srishti Madhusudhan is plainly speaking- down-to-earth and charming. She can get just as nervous and impatient as all of you before a  conference, but manages to pull through confidently, paying no heed to any hurdles that may arise. So be prepared to be left in awe by the astonishing skills she uses to make you rethink everything you have ever said.
+						</p>
+						<p>
+							<br>
+							<i></p><br>
+						<a href="#" STYLE="color:#ffffff" class="special" data-toggle="modal" data-target="#underSec"><b
+								style="font-size: 1.3em">Letter
+								from Crisis Director</b></a>
+					</div>
+				</div>
+			</section>
+
+			<section id="two" class="wrapper alt style2">
+				<div class="inner">
+					<center>
+						<h2 class="major" STYLE="color:#ffffff">SCHEDULE</h2>
+					</center>
+
+
+					<div class="content" style="overflow-x:auto">
+						<br>
+						<br>
+						<div class="list-type5">
+							<ol>
+								<center><strong>
+										<li style="font: 1.3em sans-serif;  color:white">DAY 1-10<sup>th</sup> September
+										</li>
+
+										<table class="container">
+											<thead>
+												<tr>
+													<th>
+														<h1>Time</h1>
+													</th>
+													<th>
+														<h1>Event</h1>
+													</th>
+
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>9:00 am - 9:45 am</td>
+													<td>Opening Ceremony</td>
+
+												</tr>
+												<tr>
+													<td>10:00 am - 11:30 am</td>
+													<td>Session 1</td>
+
+												</tr>
+												<tr>
+													<td>11:30 am - 11:45am</td>
+													<td>Break</td>
+
+												</tr>
+												<tr>
+													<td>11:45 am - 1:15 pm</td>
+													<td>Session 2</td>
+
+												</tr>
+												<tr>
+													<td>1:15 pm - 2:00 pm</td>
+													<td>Lunch break</td>
+
+												</tr>
+												<tr>
+													<td>2:00 pm - 3:30 pm</td>
+													<td>Session 3</td>
+
+												</tr>
+												<tr>
+													<td>3:30 pm - 4:00 pm</td>
+													<td>break</td>
+
+												</tr>
+												<tr>
+													<td>4:00 pm - 5:30 pm</td>
+													<td>Session 4</td>
+
+												</tr>
+											</tbody>
+										</table>
+										<br>
+
+
+
+
+
+
+										<!-- <div class="list-type3">
+                                   <ol>
+                                           <li><a href="#">.</a></li>
+                                           <li><a href="#">.</a></li>
+                                           <li><a href="#">.</a></li>
+                                   </ol>
+                              </div> -->
+										<li style="font: 1.3em sans-serif;  color:white">DAY 2 - 11<sup>th</sup>
+											September
+										</li>
+
+										<table class="container">
+											<thead>
+												<tr>
+													<th>
+														<h1>Time</h1>
+													</th>
+													<th>
+														<h1>Event</h1>
+													</th>
+
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>8:45 am </td>
+													<td>Reporting Time</td>
+
+												</tr>
+												<tr>
+													<td>9:00 am - 11:00 am</td>
+													<td>Session 5</td>
+
+												</tr>
+												<tr>
+													<td>11:00 am - 11:15 am</td>
+													<td>break</td>
+
+												</tr>
+
+												<tr>
+													<td>11:15 am - 1:00 pm</td>
+													<td>Session 6</td>
+
+												</tr>
+												<tr>
+													<td>1:00 pm - 2:00 pm</td>
+													<td>Lunch Break</td>
+
+												</tr>
+												<tr>
+													<td>2:00 pm - 3:30 pm</td>
+													<td>Session 7</td>
+
+												</tr>
+												<tr>
+													<td>3:30 pm - 4:00 pm</td>
+													<td>break</td>
+
+												</tr>
+												<tr>
+													<td>4:00 pm - 5:45 pm</td>
+													<td>Session 8</td>
+
+												</tr>
+												<tr>
+													<td>6:00 pm - 7:00 pm</td>
+													<td>Closing ceremony</td>
+
+												</tr>
+											</tbody>
+										</table>
+										<br>
+
+
+
+										<br>
+
+
+									</strong>
+								</center>
+							</ol>
+
+						</div>
+					</div>
+
+			</section>
+
+			<section id="two" class="wrapper style3">
+				<div class="inner">
+					<div class="content">
+
+						<div class="inner">
+							<!-- <div class="content">
+								<center>
+									<h2 class="major">RULES AND REGULATIONS</h2>
+								</center>
+								<h3>GENERAL INSTRUCTIONS</h3>
+								<ul>
+									<li>All delegates are expected to maintain decorum inside school premises and follow
+										instructions given by their
+										respective Executive Board members when inside committees. </li>
+									<li>All delegates must arrive on time and be present in committee on all days and
+										during all sessions.
+									</li>
+								</ul>
+								<br>
+								<h3>Gadget Policy</h3>
+								<ul>
+									<li>Delegates are allowed to use electronic gadgets for all offline purposes.
+										(Except in the Axis Tripartite).
+									</li>
+									<li>Use of any electronic gadget is stricty prohibited in the Axis Tripartite.</li>
+									<li>Usage of internet in any committee is strictly prohibited.
+									</li>
+
+								</ul>
+
+								<br>
+								<h3>Payment Method(Registration Fee = ₹1000 per Delegate)</h3>
+								<ul>
+									<li>Payment is to be made to faculty incharge of the respective school on
+										announcement of allotments.</li>
+									<li>Internal Delegates: Payment should be made to the respective class teachers by
+										16th August, 2020, on announcement
+										of allotments.</li>
+								</ul>
+
+								<br>
+								<h3>Dress Code : Western formals</h3>
+								<ul>
+									<li><b>For girls: </b>Knee length skirts, blouses/skirts, jumpsuits, formal trousers
+										and shirts.</li>
+									<li><b>For boys: </b>Full-sleeved shirts and formal trousers. Tie is compulsory.
+									</li>
+								</ul>
+
+								<br>
+								<h3>Position papers</h3>
+								<p>All committees except Axis Tripartite and International Press Corps require the
+									submission of position papers.
+
+								</p>
+								<p>Last date for submission of position papers :<b> Midnight of 21st August, 2020.</b>
+									(Refer to Delegate Handbook for Sample Position Paper)
+									<br>
+									<b>Note:The position papers have to be mailed to the respective committee
+										E-mails.</b>
+								</p>
+								<br>
+								<h3>Eco-friendly Motive</h3>
+								<p> To maintain an eco-friendly environment, we request all delegates to bring their own
+									water bottles to avoid use
+									of plastic water bottles. Drinking Water will be provided at R-NPSMUN'18 and the
+									delegates can refill their bottles
+									any time.
+								</p>
+								<br>
+
+								<p><b>Lunch and refreshments will be provided for all delegates on all days of R-NPSMUN
+										2020.
+									</b>
+								</p>
+								<br>
+
+								<p><b>For details regarding MUN RoP, sample position paper and draft resolution, refer
+										to the Delegate Handbook.
+									</b>
+								</p>
+
+
+							</div> -->
+
+
+							<div>
+								<a href="https://drive.google.com/file/d/1uAdGlTtcF_vYkXb7M3jnOXf1oB03v4Hn/view?usp=sharing">
+									<button href="https://drive.google.com/file/d/1uAdGlTtcF_vYkXb7M3jnOXf1oB03v4Hn/view?usp=sharing"
+										class="button primary icon fa-download" style="width:100%; font-size:1em">
+										<!-- <a href="./content/portfolios/cresi.pdf"> -->DELEGATE HANDBOOK
+										<!-- </a> -->
+									</button>
+								</a>
+							</div>
+						</div>
+					</div>
+
+			</section>
+
+			<!-- Four -->
+			<section id="four" class="wrapper alt style1">
+
+				<div class="inner" id='committees'>
+					<center>
+						<h2 class="major" STYLE="color:#ffffff">Committees</h2>
+					</center>
+					<section class="features">
+
+						<article>
+							<a href='Disec.html'>
+								<div style="border-radius: 100%; text-align: center; size: 50%">
+									<img src="./images/UNLO.gif"
+										style="height : 11em; width: 13em; left: 50%;border-radius: 100%">
+									<p>
+									<h1 style="font: 1.3em sans-serif;  color:white">DISEC</h1>
+									</p>
+								</div>
+							</a>
+
+						</article>
+
+						<article>
+							<a href='unsc.html'>
+								<div style="border-radius: 100%; text-align: center; size: 50%">
+									<img src="./images/sochum.JPG"
+										style="height : 11em; width : 11em; left: 50%;border-radius: 50%">
+									<p>
+
+									<h1 style="font: 1.3em sans-serif;  color:white">Social, Humanitarian and Cultural
+										committee</h1>
+
+									</p>
+								</div>
+							</a>
+						</article>
+
+						<article>
+							<a href='cresi.html'>
+								<div style="border-radius: 100%; text-align: center">
+									<img src="./lggoooo.jpg" style="height : 11em; width : 11em; left: 50%; border-radius: 50%;">
+									<p>
+
+									<h1 style="font: 1.3em sans-serif;  color:white ; text-transform: uppercase"
+										href='cresi.html'>Indian War Cabinet</h1>
+									</p>
+								</div>
+							</a>
+
+						</article>
+
+						<article>
+							<a href='axis.html'>
+
+								<div style="border-radius: 100%; text-align: center">
+									<img src="./images/ussen.png" style="height : 11em; width : 11em; left: 50%; border-radius: 40%;border-radius: 50%;">
+									<p>
+									<h1 style="font: 1.3em sans-serif;  color:white; " href='axis.html'>US Senate</h1>
+									</p>
+								</div>
+							</a>
+
+						</article>
+
+
+						<article>
+							<a href="ipc.html">
+
+								<div style="border-radius: 100%; text-align: center">
+									<img src="./images/IPC logo.png"
+										style="height : 11em; width : 11em; left: 50%; border-radius: 100%">
+									<p>
+									<h1 style="font: 1.3em sans-serif;  color:white">INTERNATIONAL PRESS CORPS</h1>
+									</p>
+								</div>
+							</a>
+
+						</article>
+
+
+
+				</div>
+
+			</section>
+			<!-- 				
+				<button style="width:100%">
+					<a href="./content/guides/DelegateHandbook.pdf">Delegate Handbook</a>
+				</button>
+				 -->
+		</section>
+
+
+		<section id="two" class="wrapper style2">
+
+
+		</section>
+
+
+		<br>
+		<br>
+	</div>
+
+
+
+	<!-- Footer -->
+	<section id="footer">
+		<div class="inner">
+			<ul class="contact">
+				<li class="fa-home">
+					National Public School - Rajajinagar
+					<br /> 1036-A, Purandharapura, V Block,
+					<br /> Rajajinagar Bengaluru - 560010
+				</li>
+				<li class="fa-phone">(080) 23350361</li>
+				<li class="fa-envelope">
+					<a>rnpsmun2020@gmail.com</a>
+				</li>
+				<!-- <li class="fa-twitter">
+							<a href="#">twitter.com/untitled-tld</a>
+						</li> -->
+
+				<li class="fa-instagram">
+					<a href="https://instagram.com/rnpsmun.2020?igshid=e4tjwvr7lf0e">Visit us on Instagram</a>
+				</li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; R-NPSMUN Inc. All rights reserved. Hrishikesh K Haritas</li>
+			</ul>
+		</div>
+	</section>
+
+	</div>
+
+
+	<!-- SEC GEN MODAL -->
+	<div id="secgen" class="modal fade" role="dialog" style="top: 15%; ">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header" style="background-color:#28314e">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" style="color:#ffffff ; font: 1.2em times-new-roman;">Letter from the
+						Secretary General</h4>
+				</div>
+				<div class="modal-body" style="background-color:#28314e">
+					<p>
+						<i>Greetings delegates!</i>
+						<br> </p>
+					<br>
+					<p>From the RNPSMUN family, I extend a warm welcome to each and every one of you. I hope we find you in the best of health, for an online environment can be demanding for everyone, but holds opportunities for everyone to showcase their immense potential. As we meet on 10 September 2020, this MUN stands testimony to the truth that no change in external environment can deter a MUNner from learning, growing and enjoying!</p>
+					<p> Five vibrant committees, a professional Executive Board, a very helpful Organising Committee and a determined Secretariat, this sums up all what a MUN needs to be a grand success. However, RMUN 2020 is more than just that. The efforts which have gone in for the past countless hours are only reflected in the success of this conference, and that is what I strive for. Regardless of whether you win or not, I promise you, you shall take back a learning experience and heartfelt memories like never before. 
+					</p>Please note that we are always open to your feedback and/ or suggestions. We will make sure that there are no discrepancies from our side, however, if you still notice any, please feel free to reach out to us anytime. RMUN 2020, with a great sense of professionalism and experience, shall prove to you that your allotment does not matter, your impact does. </p>
+					<p>Looking forward to meeting all of you, and do not forget to have fun!</p>
+					<p>
+
+						<br>
+					</p>
+					<p>
+						<b>
+							Anjana Palamand
+							<br> Secretary General
+							<br> R-NPSMUN 2020
+							<br> secgen.rmun2020@gmail.com
+						</b>
+					</p>
+				</div>
+				<div class="modal-footer" style="background-color:#28314e ">
+					<button type="button" class="btn " data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<!-- SEC GEN MODAL -->
+	<div id="underSec" class="modal fade" role="dialog" style="top: 15%; ">
+		<div class="modal-dialog">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header" style="background-color:#28314e">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title" style="color:#ffffff ; font: 1.2em times-new-roman;">Letter from the Crisis Director
+						
+					</h4>
+				</div>
+				<div class="modal-body" style="background-color:#28314e">
+					<p>
+						<b> “Winning is something but participation is EVERYTHING ”
+						</b>
+						<br>
+
+					</p>
+
+					<p>Greetings Delegates!</p>
+					<p>RNPSMUN has swung back into action again in 2020! Keeping the current circumstances in mind we
+						have decided to go entirely virtual this year with five extremely exciting and well-rounded
+						committees. Here we aim to channelise constructive thought and make sure that every
+						delegate receives all the motivation and guidance required to make this experience a delightful
+						one.</p>
+
+					<p>I welcome all the first timers to the MUN circuit, knowing all about the nervousness and
+						anticipation, trust me, it gets much better and all of you shall be successful. Delegates feel free
+						to voice your concerns and opinions without any hesitation at all. With that, best of luck and
+						looking forward to an enthusiastic participation.</p>
+
+					<p>
+						<b>Srishti M
+							<br> Crisis Director
+							<br> R-NPSMUN 2020
+							<b>
+					</p>
+				</div>
+				<div class="modal-footer" style="background-color:#28314e ">
+					<button type="button" class="btn " data-dismiss="modal">Close</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+	<script src="countdown.js"></script>
+</body>
+
+</html>
