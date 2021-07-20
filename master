@@ -1,0 +1,8 @@
+$ mkdir practice; cd practice;
+$ git init; git remote add origin git@github.com:user/practice.git;
+
+$ git push origin --mirror
+remote: error: refusing to delete the current branch: refs/heads/master
+To git@github.com:user/practice.git
+ ! [remote rejected] master (deletion of the current branch prohibited)
+error: failed to push some refs to 'git@github.com:user/practice.git'
